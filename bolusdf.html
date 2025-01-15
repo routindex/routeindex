@@ -1,0 +1,2964 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_48362c84420aff7149ac51f743c403b2 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_48362c84420aff7149ac51f743c403b2" ></div>
+        
+    
+        <div style="position: fixed;
+             top: 10px; right: 10px; width: 180px;
+             background-color: rgba(255, 255, 255, 0.8); z-index:9999; font-size:12px; padding: 8px; border-radius:8px; border:1px solid #ccc;">
+             <b>Toplam Mesafe:</b> 699.91 km<br>
+             <b>Toplam Süre:</b> 13 saat 46 dk
+        </div>
+        
+    
+        
+        <div style="position: fixed;
+             top: 90px; left: 10px; width: auto;
+             background: linear-gradient(to bottom right, #ffffff, #f0f0f0);
+             z-index:9999; font-size:14px; padding: 10px;
+             border:1px solid #ccc; border-radius:8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);"
+             id="menu_container">
+            <button id="trip_btn" onclick="toggleTripList()" style="background:#f7b705; border:none; border-radius:5px; padding:5px 10px; color:#000; font-size:12px; cursor:pointer;">
+                Gezi Listem
+            </button>
+            <div id="trip_list" style="display: none; max-height: 400px; max-width: 300px; overflow: auto; margin-top: 10px;">
+                
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>1. Ressam Mehmet Yücetürk Sanat Merkezi (Merkez)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(Başlangıç)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.731527, 31.600038], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.731527,31.600038"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>2. Tarihi Bolu Hükümet Konağı (Merkez)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(0.14 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.730269, 31.600334], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.730269,31.600334"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>3. Bolu Tabaklar Hamamı (Merkez)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(0.43 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.73086, 31.605363], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.73086,31.605363"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>4. Karamanlı Camii (Merkez)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(0.26 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.733143, 31.605821], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.733143,31.605821"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>5. Bolu Müzesi (Merkez)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(0.10 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.733604, 31.606796], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.733604,31.606796"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>6. Aşağı Taşhan (Merkez)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(0.20 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.733149, 31.609045], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.733149,31.609045"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>7. Yukarı Taşhan (Merkez)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(0.03 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.733389, 31.609039], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.733389,31.609039"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>8. Bolu Yıldırım Bayezid Camii (Merkez)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(0.03 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.733405, 31.609382], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.733405,31.609382"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>9. Keçeci Mehmet Camii (Merkez)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(0.14 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.732525, 31.610594], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.732525,31.610594"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>10. Sultan Hamamı (Merkez)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(0.06 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.732495, 31.609882], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.732495,31.609882"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>11. İmaret Camii (Merkez)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(0.09 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.732015, 31.609071], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.732015,31.609071"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>12. Saraçhane Cami (Merkez)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(0.07 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.732452, 31.60851], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.732452,31.60851"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>13. Yıldırım Bayezid Hamamı / Orta Hamam (Merkez)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(0.03 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.7323, 31.608259], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.7323,31.608259"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>14. Kadı Camii (Merkez)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(0.09 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.731897, 31.607269], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.731897,31.607269"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>15. Gülezler Konağı (Merkez)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(0.19 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.730295, 31.607958], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.730295,31.607958"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>16. Aktaş Camii (Merkez)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(0.24 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.729763, 31.610759], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.729763,31.610759"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>17. Aktaş Türbesi (Merkez)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(0.03 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.729767, 31.611056], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.729767,31.611056"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>18. Tarihi Çeşme (Merkez)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(0.27 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.730917, 31.61394], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.730917,31.61394"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>19. Ilıca Musa Paşa Camii (Merkez)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(5.67 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.68473, 31.619586], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.68473,31.619586"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>20. Bolu Gölcük Tabiat Parkı (Merkez)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(7.16 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.656121, 31.63004], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.656121,31.63004"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>21. Akkaya Travertenleri (Merkez)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(19.82 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.67491, 31.519271], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.67491,31.519271"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>22. Gölköy Barajı (Merkez)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(4.57 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.700202, 31.538367], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.700202,31.538367"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>23. Karaköy Cuma Camii (Merkez)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(2.79 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.716608, 31.538965], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.716608,31.538965"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>24. Tokad-İ Hayrettin Türbesi (Merkez)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(10.24 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.731348, 31.469637], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.731348,31.469637"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>25. Abant Gölü Tabiat Parkı (Merkez)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(24.64 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.612959, 31.279374], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.612959,31.279374"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>26. Mudurnu Karamurat Gölü (Mudurnu)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(33.28 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.566102, 30.956665], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.566102,30.956665"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>27. Sülüklügöl Tabiat Parkı (Mudurnu)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(13.69 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.523782, 30.87412], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.523782,30.87412"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>28. Göynük Çubuk Gölü (Göynük)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(61.36 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.480054, 30.832681], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.480054,30.832681"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>29. Göynük Zafer Kulesi (Göynük)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(13.33 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.400342, 30.785522], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.400342,30.785522"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>30. Gazi Süleyman Paşa Hamamı (Göynük)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(0.15 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.39935, 30.786696], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.39935,30.786696"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>31. Akşemseddin Türbesi (Göynük)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(0.03 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.399312, 30.78702], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.399312,30.78702"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>32. Gazi Süleyman Paşa Camii (Göynük)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(0.02 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.399369, 30.787246], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.399369,30.787246"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>33. Ömer Sekkin Hazreti Türbesi (Göynük)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(0.35 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.401634, 30.790113], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.401634,30.790113"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>34. Sünnet Gölü Tabiat Parkı (Göynük)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(23.57 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.422644, 30.956008], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.422644,30.956008"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>35. Mudurnu Yıldırım Bayezid Hamamı (Mudurnu)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(35.24 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.464908, 31.21124], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.464908,31.21124"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>36. Mudurnu Yıldırım Bayezid Camii (Mudurnu)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(0.07 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.464445, 31.211875], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.464445,31.211875"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>37. Seben Kaya Evleri (Seben)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(68.71 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.431531, 31.601378], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.431531,31.601378"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>38. Kıbrıscık Karagöl Tabiat Parkı (Kıbrıscık)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(75.80 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.354203, 31.928239], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.354203,31.928239"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>39. Kartalkaya Kayak Merkezi (Merkez)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(84.81 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.597514, 31.808795], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.597514,31.808795"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>40. Yedigöller Milli Parkı (Merkez, Bolu)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(124.70 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.941268, 31.744918], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.941268,31.744918"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>41. Gerede Esentepe Mesire Alanı (Gerede)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(86.58 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.806144, 32.191529], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.806144,32.191529"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 5px; padding:5px 0; border-bottom:1px solid #ddd;">
+                <div style="font-size: 12px; white-space: nowrap; margin-bottom:5px;">
+                    <b>42. Gerede Aşağı Tekke Camii ve Türbesi (Gerede)</b> <span style="margin-left: 5px; font-size:11px; color:#555;">(0.94 km)</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 5px;">
+                    <button style="
+                        font-size: 10px;
+                        background:#f7b705;
+                        border:none;
+                        border-radius:4px;
+                        padding:3px 6px;
+                        cursor:pointer;
+                        width:85px;
+                        color:#000000;
+                    " 
+                    onclick="map_48362c84420aff7149ac51f743c403b2.setView([40.798842, 32.197104], 15);">
+                        Haritada Gör
+                    </button>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=40.798842,32.197104"
+                       target="_blank"
+                       style="text-decoration: none; display: inline-block; background:#f7b705; border:none; border-radius:4px; padding:3px 6px; width:85px; font-size:10px; text-align:center; color:#000000;">
+                        Yol Tarifi
+                    </a>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+        
+        
+        <div style="position: fixed;
+             bottom: 10px; left: 10px; width: auto;
+             background: linear-gradient(to bottom right, #ffffff, #f0f0f0);
+             z-index:9999; font-size:14px; padding: 10px;
+             border:1px solid #ccc; border-radius:8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);"
+             id="location_container">
+            <button style="background:#f7b705; border:none; border-radius:5px; padding:5px 10px; color:#000; font-size:12px; cursor:pointer;"
+                onclick="getLocation()">
+                Mevcut Konumum
+            </button>
+        </div>
+        <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    function(position) {
+                        let lat = position.coords.latitude;
+                        let lon = position.coords.longitude;
+                        let marker = L.marker([lat, lon], {
+                            icon: L.icon({
+                                iconUrl: 'https://maps.google.com/mapfiles/ms/icons/yellow-dot.png',
+                                iconSize: [32, 32],
+                                iconAnchor: [16, 32],
+                                popupAnchor: [0, -32]
+                            })
+                        }).addTo(map_48362c84420aff7149ac51f743c403b2).bindPopup('Mevcut Konumum').openPopup();
+                        map_48362c84420aff7149ac51f743c403b2.setView([lat, lon], 15);
+                    },
+                    function(error) {
+                        alert('Could not get location: ' + error.message);
+                    }
+                );
+            } else {
+                alert('Geolocation is not supported by this browser.');
+            }
+        }
+        </script>
+        
+        
+        <div style="position: fixed;
+             bottom: 10px; right: 10px; width: auto;
+             background: linear-gradient(to bottom right, #ffffff, #f0f0f0);
+             z-index:9999; font-size:14px; padding: 10px;
+             border:1px solid #ccc; border-radius:8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+            <button style="background:#f7b705; border:none; border-radius:5px; padding:5px 10px; color:#000; font-size:12px; cursor:pointer;"
+            onclick="window.open('https://www.instagram.com/routeindex?igsh=aXZqZTk0YWl0NWtq&utm_source=qr','_blank')">
+            Daha Fazlası
+            </button>
+        </div>
+        
+        <script>
+        const tripList = document.getElementById('trip_list');
+        const menuContainer = document.getElementById('menu_container');
+
+        function toggleTripList() {
+            tripList.style.display = tripList.style.display === 'none' ? 'block' : 'none';
+        }
+
+        document.addEventListener('click', function(event) {
+            const isClickInsideMenu = menuContainer.contains(event.target);
+            if (!isClickInsideMenu && event.target.id !== 'trip_btn') {
+                tripList.style.display = 'none';
+            }
+        });
+        </script>
+        
+</body>
+<script>
+    
+    
+            var map_48362c84420aff7149ac51f743c403b2 = L.map(
+                "map_48362c84420aff7149ac51f743c403b2",
+                {
+                    center: [40.731527, 31.600038],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_b939cd33cdc0ff02e65870666b095449 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_b939cd33cdc0ff02e65870666b095449.addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var poly_line_cbe089b48d5e5ca23f4d558305c6ef3b = L.polyline(
+                [[40.731527, 31.600038], [40.730269, 31.600334]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_39db140e8db96f09b26453c268bca566 = L.marker(
+                [40.730897999999996, 31.600186],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_fa2a1ad891168116762fe7c2ea4e966b = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e0.14 km\u003c/div\u003e"});
+            marker_39db140e8db96f09b26453c268bca566.setIcon(div_icon_fa2a1ad891168116762fe7c2ea4e966b);
+        
+    
+            var poly_line_47c1e7f4bef11b6bc14bb55af433f322 = L.polyline(
+                [[40.730269, 31.600334], [40.73086, 31.605363]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_01d8e68e5d196a6f1d21f0a5eaa3af04 = L.marker(
+                [40.7305645, 31.6028485],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_93190ab4fbfd5b089075af86dafdb113 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e0.43 km\u003c/div\u003e"});
+            marker_01d8e68e5d196a6f1d21f0a5eaa3af04.setIcon(div_icon_93190ab4fbfd5b089075af86dafdb113);
+        
+    
+            var poly_line_446d44d4c67e02ad399f2bd9711390fa = L.polyline(
+                [[40.73086, 31.605363], [40.733143, 31.605821]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_17607f37e5d8cc5dd0694fc7ac8c0229 = L.marker(
+                [40.732001499999996, 31.605592],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_31a0501d5ea16823519fb54c7a6dc461 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e0.26 km\u003c/div\u003e"});
+            marker_17607f37e5d8cc5dd0694fc7ac8c0229.setIcon(div_icon_31a0501d5ea16823519fb54c7a6dc461);
+        
+    
+            var poly_line_027a115536d72e12b73984addfde12fb = L.polyline(
+                [[40.733143, 31.605821], [40.733604, 31.606796]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_771fb059de9af518407798202a6e22ff = L.marker(
+                [40.7333735, 31.606308499999997],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_b77a9ba80e320a84d7c9f53ecf84fd82 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e0.10 km\u003c/div\u003e"});
+            marker_771fb059de9af518407798202a6e22ff.setIcon(div_icon_b77a9ba80e320a84d7c9f53ecf84fd82);
+        
+    
+            var poly_line_fbcefcbf524edba1a9bc429afdaa3e92 = L.polyline(
+                [[40.733604, 31.606796], [40.733149, 31.609045]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_d3baf3e7e1e9d0f24691cf9d8e9dae81 = L.marker(
+                [40.7333765, 31.6079205],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_5181f6de26b3a900133497e63f7d0096 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e0.20 km\u003c/div\u003e"});
+            marker_d3baf3e7e1e9d0f24691cf9d8e9dae81.setIcon(div_icon_5181f6de26b3a900133497e63f7d0096);
+        
+    
+            var poly_line_2e5253969bc08e97018edff216d0bb1a = L.polyline(
+                [[40.733149, 31.609045], [40.733389, 31.609039]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_3ebb9aa63fd41f9aaff6af51564d56f7 = L.marker(
+                [40.733269, 31.609042],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_2eb3e90192742a905ffeae5ea2f59fe2 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e0.03 km\u003c/div\u003e"});
+            marker_3ebb9aa63fd41f9aaff6af51564d56f7.setIcon(div_icon_2eb3e90192742a905ffeae5ea2f59fe2);
+        
+    
+            var poly_line_c5c2d31da2e44559e22f13133416ef8b = L.polyline(
+                [[40.733389, 31.609039], [40.733405, 31.609382]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_cf4ded793f4d3c8ecfb26e0e1f901b0e = L.marker(
+                [40.733397, 31.6092105],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_6b46abd476bd5b00be641f8ca3f276f8 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e0.03 km\u003c/div\u003e"});
+            marker_cf4ded793f4d3c8ecfb26e0e1f901b0e.setIcon(div_icon_6b46abd476bd5b00be641f8ca3f276f8);
+        
+    
+            var poly_line_c4ce3326cdb661058482476fde030d82 = L.polyline(
+                [[40.733405, 31.609382], [40.732525, 31.610594]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_d733820d81cb8d32864d90a2af3d724e = L.marker(
+                [40.732965, 31.609988],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_36daa23f103bc9c8605f76544b47f9b5 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e0.14 km\u003c/div\u003e"});
+            marker_d733820d81cb8d32864d90a2af3d724e.setIcon(div_icon_36daa23f103bc9c8605f76544b47f9b5);
+        
+    
+            var poly_line_0074bf0dd3706fef758f3e321c50400b = L.polyline(
+                [[40.732525, 31.610594], [40.732495, 31.609882]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_015c3ee164233f6a183e2c4347556711 = L.marker(
+                [40.732510000000005, 31.610238],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_1309600d0953dfd9a52f344a63653356 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e0.06 km\u003c/div\u003e"});
+            marker_015c3ee164233f6a183e2c4347556711.setIcon(div_icon_1309600d0953dfd9a52f344a63653356);
+        
+    
+            var poly_line_560e7d0f6a7e947e5fdeb44e6e6a099a = L.polyline(
+                [[40.732495, 31.609882], [40.732015, 31.609071]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_36a6771a8aeb53af2a2689774f7b03b0 = L.marker(
+                [40.732254999999995, 31.6094765],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_95de0341912127375921b4452f10daae = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e0.09 km\u003c/div\u003e"});
+            marker_36a6771a8aeb53af2a2689774f7b03b0.setIcon(div_icon_95de0341912127375921b4452f10daae);
+        
+    
+            var poly_line_f66b95d97b4def3ac8997e99b2270b1b = L.polyline(
+                [[40.732015, 31.609071], [40.732452, 31.60851]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_c28e04a34569b13fd794c80302cf3234 = L.marker(
+                [40.7322335, 31.608790499999998],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_dd4c95c3a816f44691c6cd4791ba56be = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e0.07 km\u003c/div\u003e"});
+            marker_c28e04a34569b13fd794c80302cf3234.setIcon(div_icon_dd4c95c3a816f44691c6cd4791ba56be);
+        
+    
+            var poly_line_896bc355444f8fcefe57d17fa062e467 = L.polyline(
+                [[40.732452, 31.60851], [40.7323, 31.608259]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_5d97398862c9a7fc82228ce704acc8f0 = L.marker(
+                [40.732376, 31.6083845],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_067925549fb5bb95147f952561d4da9f = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e0.03 km\u003c/div\u003e"});
+            marker_5d97398862c9a7fc82228ce704acc8f0.setIcon(div_icon_067925549fb5bb95147f952561d4da9f);
+        
+    
+            var poly_line_dca474ac4cc2735581434997cdb77cf4 = L.polyline(
+                [[40.7323, 31.608259], [40.731897, 31.607269]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_0e405f9cc132c5020e43cf468379c47f = L.marker(
+                [40.7320985, 31.607764],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_ec20e74ccaebf584b78f449671c2cc13 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e0.09 km\u003c/div\u003e"});
+            marker_0e405f9cc132c5020e43cf468379c47f.setIcon(div_icon_ec20e74ccaebf584b78f449671c2cc13);
+        
+    
+            var poly_line_463faf2011b71eb90bc31495a92b5591 = L.polyline(
+                [[40.731897, 31.607269], [40.730295, 31.607958]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_429263fc9b4833b04ee5e5fa8d4754a6 = L.marker(
+                [40.731095999999994, 31.6076135],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_613fad068e7aac4e56ab62bfa0b82441 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e0.19 km\u003c/div\u003e"});
+            marker_429263fc9b4833b04ee5e5fa8d4754a6.setIcon(div_icon_613fad068e7aac4e56ab62bfa0b82441);
+        
+    
+            var poly_line_306bf908b5f8dec517b6684d7dc65b99 = L.polyline(
+                [[40.730295, 31.607958], [40.729763, 31.610759]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_3f0b20008a154a84aab183f717e87170 = L.marker(
+                [40.730029, 31.6093585],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_53d5f4b616f87e88e3b9abc60873a410 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e0.24 km\u003c/div\u003e"});
+            marker_3f0b20008a154a84aab183f717e87170.setIcon(div_icon_53d5f4b616f87e88e3b9abc60873a410);
+        
+    
+            var poly_line_ec03cda31754b93207f76137d06d27e8 = L.polyline(
+                [[40.729763, 31.610759], [40.729767, 31.611056]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_92a7c7597dda40fb2b62ea7d6b753fb9 = L.marker(
+                [40.729765, 31.610907500000003],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_80c34522171cf39eb028caf767b6be8e = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e0.03 km\u003c/div\u003e"});
+            marker_92a7c7597dda40fb2b62ea7d6b753fb9.setIcon(div_icon_80c34522171cf39eb028caf767b6be8e);
+        
+    
+            var poly_line_e400c02c8b8a5ded36597002358011a6 = L.polyline(
+                [[40.729767, 31.611056], [40.730917, 31.61394]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_40e67b6838b6498f873217cd352c85c0 = L.marker(
+                [40.730342, 31.612498000000002],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_9ab160f5b77ec7970b72e686d167af5b = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e0.27 km\u003c/div\u003e"});
+            marker_40e67b6838b6498f873217cd352c85c0.setIcon(div_icon_9ab160f5b77ec7970b72e686d167af5b);
+        
+    
+            var poly_line_de16cd1b2b4271d22f65c29ae8a5836f = L.polyline(
+                [[40.730917, 31.61394], [40.68473, 31.619586]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_bcb6435691f437062523fac64625d848 = L.marker(
+                [40.7078235, 31.616763],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_e2fcd0b127805f81315c688c08ea1a16 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e5.67 km\u003c/div\u003e"});
+            marker_bcb6435691f437062523fac64625d848.setIcon(div_icon_e2fcd0b127805f81315c688c08ea1a16);
+        
+    
+            var poly_line_8fed4c649e533d86701f21b1783ecf9d = L.polyline(
+                [[40.68473, 31.619586], [40.656121, 31.63004]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_b6d88f4d8b9528f7d314c217827a0222 = L.marker(
+                [40.6704255, 31.624813000000003],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_33fb5f62421df4fbd3a906de67df713d = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e7.16 km\u003c/div\u003e"});
+            marker_b6d88f4d8b9528f7d314c217827a0222.setIcon(div_icon_33fb5f62421df4fbd3a906de67df713d);
+        
+    
+            var poly_line_1a0a5928f3ed7c5afb5e781aafeffcb3 = L.polyline(
+                [[40.656121, 31.63004], [40.67491, 31.519271]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_99fa5565181ca0a7b699420217522bee = L.marker(
+                [40.6655155, 31.5746555],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_47c6768f584fea765db3a1143186830e = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e19.82 km\u003c/div\u003e"});
+            marker_99fa5565181ca0a7b699420217522bee.setIcon(div_icon_47c6768f584fea765db3a1143186830e);
+        
+    
+            var poly_line_1cceffa1bac3ae777f3254b221f6cb47 = L.polyline(
+                [[40.67491, 31.519271], [40.700202, 31.538367]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_486f865d1eec9c684bfc24152ffce977 = L.marker(
+                [40.687556, 31.528819],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_644cdab0a427e6a0fdef3c66ed847a48 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e4.57 km\u003c/div\u003e"});
+            marker_486f865d1eec9c684bfc24152ffce977.setIcon(div_icon_644cdab0a427e6a0fdef3c66ed847a48);
+        
+    
+            var poly_line_62b5eee0bcc232f9e99db88ec078f548 = L.polyline(
+                [[40.700202, 31.538367], [40.716608, 31.538965]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_bf4498dea1efc4a9d63e68dd614d9be6 = L.marker(
+                [40.708405, 31.538666],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_1262045d34c67f68ef1533d08932792e = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e2.79 km\u003c/div\u003e"});
+            marker_bf4498dea1efc4a9d63e68dd614d9be6.setIcon(div_icon_1262045d34c67f68ef1533d08932792e);
+        
+    
+            var poly_line_978402b3ac5f8901a006b24d6b1419f4 = L.polyline(
+                [[40.716608, 31.538965], [40.731348, 31.469637]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_c158ca1d5dbef2003057234809cad6a1 = L.marker(
+                [40.723978, 31.504300999999998],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_11e1a26c7681d59edfe5a3f19b01f90e = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e10.24 km\u003c/div\u003e"});
+            marker_c158ca1d5dbef2003057234809cad6a1.setIcon(div_icon_11e1a26c7681d59edfe5a3f19b01f90e);
+        
+    
+            var poly_line_83839cc0e5619e2d93fde2b8d67554f5 = L.polyline(
+                [[40.731348, 31.469637], [40.612959, 31.279374]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_3bbc08c6ad1a37d861dff8ee1a7f6b7c = L.marker(
+                [40.67215349999999, 31.374505499999998],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_4a960bce4f5593d0defaf88075593908 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e24.64 km\u003c/div\u003e"});
+            marker_3bbc08c6ad1a37d861dff8ee1a7f6b7c.setIcon(div_icon_4a960bce4f5593d0defaf88075593908);
+        
+    
+            var poly_line_bf06fc991588261fa1b9a501ce7d3b93 = L.polyline(
+                [[40.612959, 31.279374], [40.566102, 30.956665]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_be4bb4fa5256a6919ee8bbf6ed3a6d1f = L.marker(
+                [40.589530499999995, 31.118019500000003],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_b9176a1f394eb0c797301e3db59cc3ea = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e33.28 km\u003c/div\u003e"});
+            marker_be4bb4fa5256a6919ee8bbf6ed3a6d1f.setIcon(div_icon_b9176a1f394eb0c797301e3db59cc3ea);
+        
+    
+            var poly_line_4f0c4ceaecfa9b039d0dc023cbfa94e0 = L.polyline(
+                [[40.566102, 30.956665], [40.523782, 30.87412]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_df229d37f6023ecadb231fdc809f49eb = L.marker(
+                [40.544942, 30.915392500000003],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_d78a89867e93ca54814417232dc5ddd8 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e13.69 km\u003c/div\u003e"});
+            marker_df229d37f6023ecadb231fdc809f49eb.setIcon(div_icon_d78a89867e93ca54814417232dc5ddd8);
+        
+    
+            var poly_line_143aa4056e4ad667c437dc3e595c4c89 = L.polyline(
+                [[40.523782, 30.87412], [40.480054, 30.832681]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_b2bdd029e64178408235d9fc58cddeba = L.marker(
+                [40.501918, 30.8534005],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_08dc4f92f95ce0f9de031dbdb4a50b84 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e61.36 km\u003c/div\u003e"});
+            marker_b2bdd029e64178408235d9fc58cddeba.setIcon(div_icon_08dc4f92f95ce0f9de031dbdb4a50b84);
+        
+    
+            var poly_line_4f5a6e401100393dedd702cc162a06ab = L.polyline(
+                [[40.480054, 30.832681], [40.400342, 30.785522]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_5b0ac34df1e0f9ba173553d3f5630c48 = L.marker(
+                [40.440198, 30.8091015],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_e851d415a4e264d0d6a7b77af52f6979 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e13.33 km\u003c/div\u003e"});
+            marker_5b0ac34df1e0f9ba173553d3f5630c48.setIcon(div_icon_e851d415a4e264d0d6a7b77af52f6979);
+        
+    
+            var poly_line_e5735541608b1dbbbd3531e12c1075ea = L.polyline(
+                [[40.400342, 30.785522], [40.39935, 30.786696]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_c4e180f590a92996c9c14f900d70287f = L.marker(
+                [40.399846, 30.786109],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_be32f52b6d0f24195130963ff945de1c = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e0.15 km\u003c/div\u003e"});
+            marker_c4e180f590a92996c9c14f900d70287f.setIcon(div_icon_be32f52b6d0f24195130963ff945de1c);
+        
+    
+            var poly_line_893edbaa0963496c823b55351a470dcf = L.polyline(
+                [[40.39935, 30.786696], [40.399312, 30.78702]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_82526a806cd446e0d7a540ceda37c730 = L.marker(
+                [40.399331000000004, 30.786858],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_85df1933674981941a8a904fc53bd22c = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e0.03 km\u003c/div\u003e"});
+            marker_82526a806cd446e0d7a540ceda37c730.setIcon(div_icon_85df1933674981941a8a904fc53bd22c);
+        
+    
+            var poly_line_af96530db9faceece1e39dbc7612492e = L.polyline(
+                [[40.399312, 30.78702], [40.399369, 30.787246]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_219d073da1e8f2f1af4b983549abb198 = L.marker(
+                [40.3993405, 30.787132999999997],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_a1d28b0dac6ad3cd4a44a7b4b3360272 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e0.02 km\u003c/div\u003e"});
+            marker_219d073da1e8f2f1af4b983549abb198.setIcon(div_icon_a1d28b0dac6ad3cd4a44a7b4b3360272);
+        
+    
+            var poly_line_0c4436ff947722b4a699ae9cbd8f4cfd = L.polyline(
+                [[40.399369, 30.787246], [40.401634, 30.790113]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_60ec392bcf84a94e0eb2561aee95de40 = L.marker(
+                [40.400501500000004, 30.7886795],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_d28d93025b5c23685c2057240e9261c7 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e0.35 km\u003c/div\u003e"});
+            marker_60ec392bcf84a94e0eb2561aee95de40.setIcon(div_icon_d28d93025b5c23685c2057240e9261c7);
+        
+    
+            var poly_line_5fc3e30021ea318078f6d9b393452d9b = L.polyline(
+                [[40.401634, 30.790113], [40.422644, 30.956008]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_177b31a87e2d8b69539b80e20dd2515b = L.marker(
+                [40.412138999999996, 30.8730605],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_30f3e99c1017f6a62636d7d1a32e2600 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e23.57 km\u003c/div\u003e"});
+            marker_177b31a87e2d8b69539b80e20dd2515b.setIcon(div_icon_30f3e99c1017f6a62636d7d1a32e2600);
+        
+    
+            var poly_line_edd761874c95152afc8050ab83e9fdac = L.polyline(
+                [[40.422644, 30.956008], [40.464908, 31.21124]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_cb208933b6cbf96a0528a4cecfea6bf3 = L.marker(
+                [40.443776, 31.083624],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_594e909d601a321601ef560e56cf4227 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e35.24 km\u003c/div\u003e"});
+            marker_cb208933b6cbf96a0528a4cecfea6bf3.setIcon(div_icon_594e909d601a321601ef560e56cf4227);
+        
+    
+            var poly_line_dab12d83af9bfe6874fca5a9a7272b40 = L.polyline(
+                [[40.464908, 31.21124], [40.464445, 31.211875]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_f85a392547066fe4c131dfde3135bff6 = L.marker(
+                [40.464676499999996, 31.211557499999998],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_b1fdb552783c3079bc093a3dbed19a5e = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e0.07 km\u003c/div\u003e"});
+            marker_f85a392547066fe4c131dfde3135bff6.setIcon(div_icon_b1fdb552783c3079bc093a3dbed19a5e);
+        
+    
+            var poly_line_45bb70c81fca17f28fed93549cd36a72 = L.polyline(
+                [[40.464445, 31.211875], [40.431531, 31.601378]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_5cb39b7b22803fd704d5be0d5bec3b3d = L.marker(
+                [40.447987999999995, 31.4066265],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_801eaa0cdd778d258a886bd2632e39eb = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e68.71 km\u003c/div\u003e"});
+            marker_5cb39b7b22803fd704d5be0d5bec3b3d.setIcon(div_icon_801eaa0cdd778d258a886bd2632e39eb);
+        
+    
+            var poly_line_5128ba8e5adb257e598fae3bf6f8093c = L.polyline(
+                [[40.431531, 31.601378], [40.354203, 31.928239]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_22ce7c133dff232b32c864d88f46ee14 = L.marker(
+                [40.392866999999995, 31.7648085],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_745a07ef034ace359e931adb0f7a6dfe = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e75.80 km\u003c/div\u003e"});
+            marker_22ce7c133dff232b32c864d88f46ee14.setIcon(div_icon_745a07ef034ace359e931adb0f7a6dfe);
+        
+    
+            var poly_line_5297724e732c2906db50acded2818a5b = L.polyline(
+                [[40.354203, 31.928239], [40.597514, 31.808795]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_9cf775a4fb2e4fda1c692a717ecabe58 = L.marker(
+                [40.4758585, 31.868517],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_d171814c7ebe9ff9f12b33a05bcc063f = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e84.81 km\u003c/div\u003e"});
+            marker_9cf775a4fb2e4fda1c692a717ecabe58.setIcon(div_icon_d171814c7ebe9ff9f12b33a05bcc063f);
+        
+    
+            var poly_line_9120dd21871075b350b4e3f3243255db = L.polyline(
+                [[40.597514, 31.808795], [40.941268, 31.744918]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_317c6df7a2bedd545d2a37c3832d42e3 = L.marker(
+                [40.769391, 31.7768565],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_d5390043e7448dea2490dfcdd74260d9 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e124.70 km\u003c/div\u003e"});
+            marker_317c6df7a2bedd545d2a37c3832d42e3.setIcon(div_icon_d5390043e7448dea2490dfcdd74260d9);
+        
+    
+            var poly_line_b549927829a1d555b442f2e0bfb80a5c = L.polyline(
+                [[40.941268, 31.744918], [40.806144, 32.191529]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_cbaa9a8c80dc3fc5f32b116ed7f7ce69 = L.marker(
+                [40.873706, 31.9682235],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_330e589316cb3df79ab8f5c07a1384c8 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e86.58 km\u003c/div\u003e"});
+            marker_cbaa9a8c80dc3fc5f32b116ed7f7ce69.setIcon(div_icon_330e589316cb3df79ab8f5c07a1384c8);
+        
+    
+            var poly_line_20c1b81b2c8ed88244881fdfa7070deb = L.polyline(
+                [[40.806144, 32.191529], [40.798842, 32.197104]],
+                {"bubblingMouseEvents": true, "color": "Blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "Blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var marker_e12e04f8a0902c0ac9f707ac28fa0cd6 = L.marker(
+                [40.802493, 32.1943165],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_a911ffc5004b79cb38ccaf04acfd37c4 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 12pt; color: black; font-weight: bold;\"\u003e0.94 km\u003c/div\u003e"});
+            marker_e12e04f8a0902c0ac9f707ac28fa0cd6.setIcon(div_icon_a911ffc5004b79cb38ccaf04acfd37c4);
+        
+    
+            var marker_98b5bb55beef2322a439ba26d350a7be = L.marker(
+                [40.731527, 31.600038],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_5ef8bf715d0c8300bcded7a581d6d7a6 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: green; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e1\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_98b5bb55beef2322a439ba26d350a7be.setIcon(div_icon_5ef8bf715d0c8300bcded7a581d6d7a6);
+        
+    
+        var popup_0b9965d6a21a706f76d732e42d44fb7d = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_2f68501e1676697563a67b0065079223 = $(`<div id="html_2f68501e1676697563a67b0065079223" style="width: 100.0%; height: 100.0%;">             <b>1. Ressam Mehmet Yücetürk Sanat Merkezi (Merkez)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.731527,31.600038" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_0b9965d6a21a706f76d732e42d44fb7d.setContent(html_2f68501e1676697563a67b0065079223);
+            
+        
+
+        marker_98b5bb55beef2322a439ba26d350a7be.bindPopup(popup_0b9965d6a21a706f76d732e42d44fb7d)
+        ;
+
+        
+    
+    
+            var marker_ddb9cae6f5d50942211570a7d70f4d48 = L.marker(
+                [40.730269, 31.600334],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_bf9c19c17285a4d07bcf082d913bf2f0 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e2\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_ddb9cae6f5d50942211570a7d70f4d48.setIcon(div_icon_bf9c19c17285a4d07bcf082d913bf2f0);
+        
+    
+        var popup_9229d809c395f19d99fd6f28452b8e23 = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_2ef9cb232ef1aad826944169b8b245d9 = $(`<div id="html_2ef9cb232ef1aad826944169b8b245d9" style="width: 100.0%; height: 100.0%;">             <b>2. Tarihi Bolu Hükümet Konağı (Merkez)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.730269,31.600334" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_9229d809c395f19d99fd6f28452b8e23.setContent(html_2ef9cb232ef1aad826944169b8b245d9);
+            
+        
+
+        marker_ddb9cae6f5d50942211570a7d70f4d48.bindPopup(popup_9229d809c395f19d99fd6f28452b8e23)
+        ;
+
+        
+    
+    
+            var marker_78c585bb63c57b91f879b01b246adc5d = L.marker(
+                [40.73086, 31.605363],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_327e574ade56efcef21cb061553fd0eb = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e3\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_78c585bb63c57b91f879b01b246adc5d.setIcon(div_icon_327e574ade56efcef21cb061553fd0eb);
+        
+    
+        var popup_28a55f5559011093edfd83eac308ea7a = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_92868e89bdca9b148c4423dff19d7400 = $(`<div id="html_92868e89bdca9b148c4423dff19d7400" style="width: 100.0%; height: 100.0%;">             <b>3. Bolu Tabaklar Hamamı (Merkez)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.73086,31.605363" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_28a55f5559011093edfd83eac308ea7a.setContent(html_92868e89bdca9b148c4423dff19d7400);
+            
+        
+
+        marker_78c585bb63c57b91f879b01b246adc5d.bindPopup(popup_28a55f5559011093edfd83eac308ea7a)
+        ;
+
+        
+    
+    
+            var marker_64bd21f570efa9cc21b4fee6b07d12af = L.marker(
+                [40.733143, 31.605821],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_b6ab5e528a4332a195501fb94cd18846 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e4\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_64bd21f570efa9cc21b4fee6b07d12af.setIcon(div_icon_b6ab5e528a4332a195501fb94cd18846);
+        
+    
+        var popup_ab8b51d6d8cb0a7841f8a9c55be7b7bc = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_3b4e71713ac83a81fa37bbaa2248d145 = $(`<div id="html_3b4e71713ac83a81fa37bbaa2248d145" style="width: 100.0%; height: 100.0%;">             <b>4. Karamanlı Camii (Merkez)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.733143,31.605821" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_ab8b51d6d8cb0a7841f8a9c55be7b7bc.setContent(html_3b4e71713ac83a81fa37bbaa2248d145);
+            
+        
+
+        marker_64bd21f570efa9cc21b4fee6b07d12af.bindPopup(popup_ab8b51d6d8cb0a7841f8a9c55be7b7bc)
+        ;
+
+        
+    
+    
+            var marker_7cfaa235dadf81d1fe3250c15b693d8b = L.marker(
+                [40.733604, 31.606796],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_a8578312558035d8526592b5ac6eb629 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e5\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_7cfaa235dadf81d1fe3250c15b693d8b.setIcon(div_icon_a8578312558035d8526592b5ac6eb629);
+        
+    
+        var popup_020263c84d33e68def6c0df18e27652b = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_f8ccd542dafc0ce86e0d6eae73aa6a12 = $(`<div id="html_f8ccd542dafc0ce86e0d6eae73aa6a12" style="width: 100.0%; height: 100.0%;">             <b>5. Bolu Müzesi (Merkez)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.733604,31.606796" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_020263c84d33e68def6c0df18e27652b.setContent(html_f8ccd542dafc0ce86e0d6eae73aa6a12);
+            
+        
+
+        marker_7cfaa235dadf81d1fe3250c15b693d8b.bindPopup(popup_020263c84d33e68def6c0df18e27652b)
+        ;
+
+        
+    
+    
+            var marker_669f34cb7e4cdad3c0be2ada84bcd573 = L.marker(
+                [40.733149, 31.609045],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_a14e55aec02965176a248b9725f84868 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e6\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_669f34cb7e4cdad3c0be2ada84bcd573.setIcon(div_icon_a14e55aec02965176a248b9725f84868);
+        
+    
+        var popup_dacd1c4b782147e6dbf34d6c4dac9551 = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_553225d2c5621da61fcfe20d74c5ade9 = $(`<div id="html_553225d2c5621da61fcfe20d74c5ade9" style="width: 100.0%; height: 100.0%;">             <b>6. Aşağı Taşhan (Merkez)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.733149,31.609045" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_dacd1c4b782147e6dbf34d6c4dac9551.setContent(html_553225d2c5621da61fcfe20d74c5ade9);
+            
+        
+
+        marker_669f34cb7e4cdad3c0be2ada84bcd573.bindPopup(popup_dacd1c4b782147e6dbf34d6c4dac9551)
+        ;
+
+        
+    
+    
+            var marker_20cd8895b432ace7cb27e9872e1d2515 = L.marker(
+                [40.733389, 31.609039],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_6036ca8619284842f6dd623da3d9567f = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e7\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_20cd8895b432ace7cb27e9872e1d2515.setIcon(div_icon_6036ca8619284842f6dd623da3d9567f);
+        
+    
+        var popup_79979b07c52713c05e4336dcc1231767 = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_3c6c7126a19297146f7bb30b7d48d205 = $(`<div id="html_3c6c7126a19297146f7bb30b7d48d205" style="width: 100.0%; height: 100.0%;">             <b>7. Yukarı Taşhan (Merkez)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.733389,31.609039" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_79979b07c52713c05e4336dcc1231767.setContent(html_3c6c7126a19297146f7bb30b7d48d205);
+            
+        
+
+        marker_20cd8895b432ace7cb27e9872e1d2515.bindPopup(popup_79979b07c52713c05e4336dcc1231767)
+        ;
+
+        
+    
+    
+            var marker_793719b2da18838ca752dd03d1fd9d59 = L.marker(
+                [40.733405, 31.609382],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_809e9ef8be48f18244820639baa4177d = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e8\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_793719b2da18838ca752dd03d1fd9d59.setIcon(div_icon_809e9ef8be48f18244820639baa4177d);
+        
+    
+        var popup_e2f52a59af480d41b3b1bfa614af0ee3 = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_6b84e2f80db4fd64f07734482a378200 = $(`<div id="html_6b84e2f80db4fd64f07734482a378200" style="width: 100.0%; height: 100.0%;">             <b>8. Bolu Yıldırım Bayezid Camii (Merkez)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.733405,31.609382" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_e2f52a59af480d41b3b1bfa614af0ee3.setContent(html_6b84e2f80db4fd64f07734482a378200);
+            
+        
+
+        marker_793719b2da18838ca752dd03d1fd9d59.bindPopup(popup_e2f52a59af480d41b3b1bfa614af0ee3)
+        ;
+
+        
+    
+    
+            var marker_4bc60bf28e90c5b8faf4048b651e0b09 = L.marker(
+                [40.732525, 31.610594],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_52740293572a1bc0355c5f17260bb29c = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e9\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_4bc60bf28e90c5b8faf4048b651e0b09.setIcon(div_icon_52740293572a1bc0355c5f17260bb29c);
+        
+    
+        var popup_b8f3e33eeeffb38361a4aeebda9f0b22 = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_6f12210e9c5c55dcae0fefe3657f96e4 = $(`<div id="html_6f12210e9c5c55dcae0fefe3657f96e4" style="width: 100.0%; height: 100.0%;">             <b>9. Keçeci Mehmet Camii (Merkez)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.732525,31.610594" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_b8f3e33eeeffb38361a4aeebda9f0b22.setContent(html_6f12210e9c5c55dcae0fefe3657f96e4);
+            
+        
+
+        marker_4bc60bf28e90c5b8faf4048b651e0b09.bindPopup(popup_b8f3e33eeeffb38361a4aeebda9f0b22)
+        ;
+
+        
+    
+    
+            var marker_e91427e62fbbcabd7eacdb49fb4c9a2c = L.marker(
+                [40.732495, 31.609882],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_2c7b76d4e96490d706cc1a66a87be4d3 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e10\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_e91427e62fbbcabd7eacdb49fb4c9a2c.setIcon(div_icon_2c7b76d4e96490d706cc1a66a87be4d3);
+        
+    
+        var popup_1d559c005e223f8a140fc356a169ffed = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_34b24b6a68c973fd6033dad3f8973c4f = $(`<div id="html_34b24b6a68c973fd6033dad3f8973c4f" style="width: 100.0%; height: 100.0%;">             <b>10. Sultan Hamamı (Merkez)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.732495,31.609882" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_1d559c005e223f8a140fc356a169ffed.setContent(html_34b24b6a68c973fd6033dad3f8973c4f);
+            
+        
+
+        marker_e91427e62fbbcabd7eacdb49fb4c9a2c.bindPopup(popup_1d559c005e223f8a140fc356a169ffed)
+        ;
+
+        
+    
+    
+            var marker_43dbe6bcc1a734ebb035eab47d2eec2a = L.marker(
+                [40.732015, 31.609071],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_5a8ca6307e9845d8b96570e91ce3c983 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e11\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_43dbe6bcc1a734ebb035eab47d2eec2a.setIcon(div_icon_5a8ca6307e9845d8b96570e91ce3c983);
+        
+    
+        var popup_3c298b0863964dd51f16e40ea3e22da2 = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_a6db476e5de1f91200fe42adc95f2bcc = $(`<div id="html_a6db476e5de1f91200fe42adc95f2bcc" style="width: 100.0%; height: 100.0%;">             <b>11. İmaret Camii (Merkez)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.732015,31.609071" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_3c298b0863964dd51f16e40ea3e22da2.setContent(html_a6db476e5de1f91200fe42adc95f2bcc);
+            
+        
+
+        marker_43dbe6bcc1a734ebb035eab47d2eec2a.bindPopup(popup_3c298b0863964dd51f16e40ea3e22da2)
+        ;
+
+        
+    
+    
+            var marker_dc37c7df596f610133f513f347c2caca = L.marker(
+                [40.732452, 31.60851],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_d509878fb2b7b63beeaba171ba13b8ae = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e12\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_dc37c7df596f610133f513f347c2caca.setIcon(div_icon_d509878fb2b7b63beeaba171ba13b8ae);
+        
+    
+        var popup_4bef1c6068c6cc63dce44699b660ad28 = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_cb36b22c542009a6d0606f109a5822d0 = $(`<div id="html_cb36b22c542009a6d0606f109a5822d0" style="width: 100.0%; height: 100.0%;">             <b>12. Saraçhane Cami (Merkez)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.732452,31.60851" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_4bef1c6068c6cc63dce44699b660ad28.setContent(html_cb36b22c542009a6d0606f109a5822d0);
+            
+        
+
+        marker_dc37c7df596f610133f513f347c2caca.bindPopup(popup_4bef1c6068c6cc63dce44699b660ad28)
+        ;
+
+        
+    
+    
+            var marker_193ce734cebcfef4fb14a11b20b6d8b2 = L.marker(
+                [40.7323, 31.608259],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_129d495b0448f5aac2ffa8c1437c190f = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e13\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_193ce734cebcfef4fb14a11b20b6d8b2.setIcon(div_icon_129d495b0448f5aac2ffa8c1437c190f);
+        
+    
+        var popup_c3741c3b537ab6347f819e87374b426d = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_7d3710504457a26eb3667bf5de621f6d = $(`<div id="html_7d3710504457a26eb3667bf5de621f6d" style="width: 100.0%; height: 100.0%;">             <b>13. Yıldırım Bayezid Hamamı / Orta Hamam (Merkez)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.7323,31.608259" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_c3741c3b537ab6347f819e87374b426d.setContent(html_7d3710504457a26eb3667bf5de621f6d);
+            
+        
+
+        marker_193ce734cebcfef4fb14a11b20b6d8b2.bindPopup(popup_c3741c3b537ab6347f819e87374b426d)
+        ;
+
+        
+    
+    
+            var marker_80b79b5763ffade46b45ccc25bfd641f = L.marker(
+                [40.731897, 31.607269],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_142c374321c04aaad1b28be10b0b0f8d = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e14\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_80b79b5763ffade46b45ccc25bfd641f.setIcon(div_icon_142c374321c04aaad1b28be10b0b0f8d);
+        
+    
+        var popup_683f51bd2245208b80c1c768ee5aa3f1 = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_ff8b9665fe773d7325da1ad370f132df = $(`<div id="html_ff8b9665fe773d7325da1ad370f132df" style="width: 100.0%; height: 100.0%;">             <b>14. Kadı Camii (Merkez)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.731897,31.607269" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_683f51bd2245208b80c1c768ee5aa3f1.setContent(html_ff8b9665fe773d7325da1ad370f132df);
+            
+        
+
+        marker_80b79b5763ffade46b45ccc25bfd641f.bindPopup(popup_683f51bd2245208b80c1c768ee5aa3f1)
+        ;
+
+        
+    
+    
+            var marker_47b634af4aef8b5748f58aec6c0c7470 = L.marker(
+                [40.730295, 31.607958],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_e47a579f1fcde1d5a6332dba05b35b82 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e15\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_47b634af4aef8b5748f58aec6c0c7470.setIcon(div_icon_e47a579f1fcde1d5a6332dba05b35b82);
+        
+    
+        var popup_f448f0ff0f4b21a6bb541a2a0f981538 = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_9bfa2780e7b3aa173ff31999e81e315d = $(`<div id="html_9bfa2780e7b3aa173ff31999e81e315d" style="width: 100.0%; height: 100.0%;">             <b>15. Gülezler Konağı (Merkez)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.730295,31.607958" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_f448f0ff0f4b21a6bb541a2a0f981538.setContent(html_9bfa2780e7b3aa173ff31999e81e315d);
+            
+        
+
+        marker_47b634af4aef8b5748f58aec6c0c7470.bindPopup(popup_f448f0ff0f4b21a6bb541a2a0f981538)
+        ;
+
+        
+    
+    
+            var marker_636e03c66cf4c314888908965d1fc5f1 = L.marker(
+                [40.729763, 31.610759],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_6d7bb15e62dbe3f1377024c5c5a0b6eb = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e16\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_636e03c66cf4c314888908965d1fc5f1.setIcon(div_icon_6d7bb15e62dbe3f1377024c5c5a0b6eb);
+        
+    
+        var popup_0db28a49029ce43d494206756d520805 = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_d5cec4265fd6f3925a42b95f922193ce = $(`<div id="html_d5cec4265fd6f3925a42b95f922193ce" style="width: 100.0%; height: 100.0%;">             <b>16. Aktaş Camii (Merkez)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.729763,31.610759" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_0db28a49029ce43d494206756d520805.setContent(html_d5cec4265fd6f3925a42b95f922193ce);
+            
+        
+
+        marker_636e03c66cf4c314888908965d1fc5f1.bindPopup(popup_0db28a49029ce43d494206756d520805)
+        ;
+
+        
+    
+    
+            var marker_d5b5338a2443b4cfb8f2a8647bf40e63 = L.marker(
+                [40.729767, 31.611056],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_f6137608a62c4ffc07e4a2193d1cedd0 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e17\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_d5b5338a2443b4cfb8f2a8647bf40e63.setIcon(div_icon_f6137608a62c4ffc07e4a2193d1cedd0);
+        
+    
+        var popup_b63bdc12b9686533680a8792ccf94b36 = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_d3f02da864ae394e65f83284ba85ab58 = $(`<div id="html_d3f02da864ae394e65f83284ba85ab58" style="width: 100.0%; height: 100.0%;">             <b>17. Aktaş Türbesi (Merkez)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.729767,31.611056" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_b63bdc12b9686533680a8792ccf94b36.setContent(html_d3f02da864ae394e65f83284ba85ab58);
+            
+        
+
+        marker_d5b5338a2443b4cfb8f2a8647bf40e63.bindPopup(popup_b63bdc12b9686533680a8792ccf94b36)
+        ;
+
+        
+    
+    
+            var marker_45abb2e1e4aea7efe3c86f71ec1539b0 = L.marker(
+                [40.730917, 31.61394],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_a9e2bbf0feb4a6cafade0dfdb1c1e72f = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e18\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_45abb2e1e4aea7efe3c86f71ec1539b0.setIcon(div_icon_a9e2bbf0feb4a6cafade0dfdb1c1e72f);
+        
+    
+        var popup_8ed7e6e54a7d03fbfbb384b7b0431bf4 = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_cc2c3355c1e7d888611aff118fab22a0 = $(`<div id="html_cc2c3355c1e7d888611aff118fab22a0" style="width: 100.0%; height: 100.0%;">             <b>18. Tarihi Çeşme (Merkez)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.730917,31.61394" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_8ed7e6e54a7d03fbfbb384b7b0431bf4.setContent(html_cc2c3355c1e7d888611aff118fab22a0);
+            
+        
+
+        marker_45abb2e1e4aea7efe3c86f71ec1539b0.bindPopup(popup_8ed7e6e54a7d03fbfbb384b7b0431bf4)
+        ;
+
+        
+    
+    
+            var marker_742c3c25b73b38ddf6b0b746efe5a121 = L.marker(
+                [40.68473, 31.619586],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_844b8c218637bc24eb5b8992fc419f7a = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e19\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_742c3c25b73b38ddf6b0b746efe5a121.setIcon(div_icon_844b8c218637bc24eb5b8992fc419f7a);
+        
+    
+        var popup_5d335a4b571ef2627f8f30feffbc0eae = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_645f9f05259407bb70ee87769ee91ba3 = $(`<div id="html_645f9f05259407bb70ee87769ee91ba3" style="width: 100.0%; height: 100.0%;">             <b>19. Ilıca Musa Paşa Camii (Merkez)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.68473,31.619586" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_5d335a4b571ef2627f8f30feffbc0eae.setContent(html_645f9f05259407bb70ee87769ee91ba3);
+            
+        
+
+        marker_742c3c25b73b38ddf6b0b746efe5a121.bindPopup(popup_5d335a4b571ef2627f8f30feffbc0eae)
+        ;
+
+        
+    
+    
+            var marker_dfd7bac90c4cc3a80afeb79c2708b49c = L.marker(
+                [40.656121, 31.63004],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_1a5aa8299b19d787b60d7c20202e0cac = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e20\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_dfd7bac90c4cc3a80afeb79c2708b49c.setIcon(div_icon_1a5aa8299b19d787b60d7c20202e0cac);
+        
+    
+        var popup_ed4e4d8ad3187c950cfacff198395a2b = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_4cfb9527d4ca9ff551aab6a7830dd883 = $(`<div id="html_4cfb9527d4ca9ff551aab6a7830dd883" style="width: 100.0%; height: 100.0%;">             <b>20. Bolu Gölcük Tabiat Parkı (Merkez)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.656121,31.63004" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_ed4e4d8ad3187c950cfacff198395a2b.setContent(html_4cfb9527d4ca9ff551aab6a7830dd883);
+            
+        
+
+        marker_dfd7bac90c4cc3a80afeb79c2708b49c.bindPopup(popup_ed4e4d8ad3187c950cfacff198395a2b)
+        ;
+
+        
+    
+    
+            var marker_ffdcfa06ef6affdc650a27daec710f02 = L.marker(
+                [40.67491, 31.519271],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_b43fc1432d6e440b032a22a8fcd015b4 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e21\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_ffdcfa06ef6affdc650a27daec710f02.setIcon(div_icon_b43fc1432d6e440b032a22a8fcd015b4);
+        
+    
+        var popup_387e97db8695569163c14807f32d11dc = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_9e361e372af7f361fbf55663053d7ee2 = $(`<div id="html_9e361e372af7f361fbf55663053d7ee2" style="width: 100.0%; height: 100.0%;">             <b>21. Akkaya Travertenleri (Merkez)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.67491,31.519271" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_387e97db8695569163c14807f32d11dc.setContent(html_9e361e372af7f361fbf55663053d7ee2);
+            
+        
+
+        marker_ffdcfa06ef6affdc650a27daec710f02.bindPopup(popup_387e97db8695569163c14807f32d11dc)
+        ;
+
+        
+    
+    
+            var marker_043595e4074fc45d306c23a3e2d881f5 = L.marker(
+                [40.700202, 31.538367],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_247d86608b0687330ea2d6c0d951672c = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e22\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_043595e4074fc45d306c23a3e2d881f5.setIcon(div_icon_247d86608b0687330ea2d6c0d951672c);
+        
+    
+        var popup_9e02b80d987bb40f2bb2c3d37253f733 = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_37ca084b1f3ce1bc4a21d7424e8f2696 = $(`<div id="html_37ca084b1f3ce1bc4a21d7424e8f2696" style="width: 100.0%; height: 100.0%;">             <b>22. Gölköy Barajı (Merkez)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.700202,31.538367" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_9e02b80d987bb40f2bb2c3d37253f733.setContent(html_37ca084b1f3ce1bc4a21d7424e8f2696);
+            
+        
+
+        marker_043595e4074fc45d306c23a3e2d881f5.bindPopup(popup_9e02b80d987bb40f2bb2c3d37253f733)
+        ;
+
+        
+    
+    
+            var marker_5df9341926c6b8fd28d342e19d4b41fd = L.marker(
+                [40.716608, 31.538965],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_21ff913dc1bbd13185befe785a5bd103 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e23\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_5df9341926c6b8fd28d342e19d4b41fd.setIcon(div_icon_21ff913dc1bbd13185befe785a5bd103);
+        
+    
+        var popup_6128e5f98462f9c9b49a9cb37c7636b8 = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_08549ddf4ac2b600dccc93e41ef3f500 = $(`<div id="html_08549ddf4ac2b600dccc93e41ef3f500" style="width: 100.0%; height: 100.0%;">             <b>23. Karaköy Cuma Camii (Merkez)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.716608,31.538965" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_6128e5f98462f9c9b49a9cb37c7636b8.setContent(html_08549ddf4ac2b600dccc93e41ef3f500);
+            
+        
+
+        marker_5df9341926c6b8fd28d342e19d4b41fd.bindPopup(popup_6128e5f98462f9c9b49a9cb37c7636b8)
+        ;
+
+        
+    
+    
+            var marker_a0e17ec5eb08d69131f1090586681d6a = L.marker(
+                [40.731348, 31.469637],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_c1cd657cdddcf4b4bbf292f4b0309bcd = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e24\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_a0e17ec5eb08d69131f1090586681d6a.setIcon(div_icon_c1cd657cdddcf4b4bbf292f4b0309bcd);
+        
+    
+        var popup_45e623cf48dbad26c94bd01ea94313a9 = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_417d8e4dfcc3333e0699cc9887b0e978 = $(`<div id="html_417d8e4dfcc3333e0699cc9887b0e978" style="width: 100.0%; height: 100.0%;">             <b>24. Tokad-İ Hayrettin Türbesi (Merkez)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.731348,31.469637" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_45e623cf48dbad26c94bd01ea94313a9.setContent(html_417d8e4dfcc3333e0699cc9887b0e978);
+            
+        
+
+        marker_a0e17ec5eb08d69131f1090586681d6a.bindPopup(popup_45e623cf48dbad26c94bd01ea94313a9)
+        ;
+
+        
+    
+    
+            var marker_c0028590c9a36f3c9539327f1f23966d = L.marker(
+                [40.612959, 31.279374],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_9846dfacf81ce3e55a5b2b596ffe81e1 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e25\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_c0028590c9a36f3c9539327f1f23966d.setIcon(div_icon_9846dfacf81ce3e55a5b2b596ffe81e1);
+        
+    
+        var popup_2f60b6c52e3be9e2bfd9ff8de1fc88ad = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_25a096fda568af052b22984357d0f287 = $(`<div id="html_25a096fda568af052b22984357d0f287" style="width: 100.0%; height: 100.0%;">             <b>25. Abant Gölü Tabiat Parkı (Merkez)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.612959,31.279374" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_2f60b6c52e3be9e2bfd9ff8de1fc88ad.setContent(html_25a096fda568af052b22984357d0f287);
+            
+        
+
+        marker_c0028590c9a36f3c9539327f1f23966d.bindPopup(popup_2f60b6c52e3be9e2bfd9ff8de1fc88ad)
+        ;
+
+        
+    
+    
+            var marker_b177a27025f1d989687c33d1bcbd9173 = L.marker(
+                [40.566102, 30.956665],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_69763ca75a8ebf57a7020fc3ce2dd60b = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e26\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_b177a27025f1d989687c33d1bcbd9173.setIcon(div_icon_69763ca75a8ebf57a7020fc3ce2dd60b);
+        
+    
+        var popup_7e02ea6623154c46a4f57fbde63514a4 = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_fdd524cd8172f843cecc5cc83727b0c4 = $(`<div id="html_fdd524cd8172f843cecc5cc83727b0c4" style="width: 100.0%; height: 100.0%;">             <b>26. Mudurnu Karamurat Gölü (Mudurnu)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.566102,30.956665" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_7e02ea6623154c46a4f57fbde63514a4.setContent(html_fdd524cd8172f843cecc5cc83727b0c4);
+            
+        
+
+        marker_b177a27025f1d989687c33d1bcbd9173.bindPopup(popup_7e02ea6623154c46a4f57fbde63514a4)
+        ;
+
+        
+    
+    
+            var marker_61be2ec78c33f931926272151d811d4a = L.marker(
+                [40.523782, 30.87412],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_b211fd76c7fdaa5bc1ad39a1348dcb9f = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e27\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_61be2ec78c33f931926272151d811d4a.setIcon(div_icon_b211fd76c7fdaa5bc1ad39a1348dcb9f);
+        
+    
+        var popup_606c59b594759f484663d89791e63441 = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_0386ea0d1481f29a39791cbbe81a29bf = $(`<div id="html_0386ea0d1481f29a39791cbbe81a29bf" style="width: 100.0%; height: 100.0%;">             <b>27. Sülüklügöl Tabiat Parkı (Mudurnu)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.523782,30.87412" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_606c59b594759f484663d89791e63441.setContent(html_0386ea0d1481f29a39791cbbe81a29bf);
+            
+        
+
+        marker_61be2ec78c33f931926272151d811d4a.bindPopup(popup_606c59b594759f484663d89791e63441)
+        ;
+
+        
+    
+    
+            var marker_4ab51323d797946d6458e7d1ed575858 = L.marker(
+                [40.480054, 30.832681],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_c8585a532e2813280b831da7f60d9dfc = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e28\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_4ab51323d797946d6458e7d1ed575858.setIcon(div_icon_c8585a532e2813280b831da7f60d9dfc);
+        
+    
+        var popup_fb6b337498cae6130b464d3d8027d48b = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_397982e6ee137b093bef3ae7b1ec5c42 = $(`<div id="html_397982e6ee137b093bef3ae7b1ec5c42" style="width: 100.0%; height: 100.0%;">             <b>28. Göynük Çubuk Gölü (Göynük)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.480054,30.832681" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_fb6b337498cae6130b464d3d8027d48b.setContent(html_397982e6ee137b093bef3ae7b1ec5c42);
+            
+        
+
+        marker_4ab51323d797946d6458e7d1ed575858.bindPopup(popup_fb6b337498cae6130b464d3d8027d48b)
+        ;
+
+        
+    
+    
+            var marker_01d4b79b073d916fe4eb2ef7db6ad2ee = L.marker(
+                [40.400342, 30.785522],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_0f077bee22acb522d893497429f2342d = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e29\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_01d4b79b073d916fe4eb2ef7db6ad2ee.setIcon(div_icon_0f077bee22acb522d893497429f2342d);
+        
+    
+        var popup_618102b90350eaf5d1cecd86d6f29508 = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_5f7bbd0e30395ffa55fa8c90d7538694 = $(`<div id="html_5f7bbd0e30395ffa55fa8c90d7538694" style="width: 100.0%; height: 100.0%;">             <b>29. Göynük Zafer Kulesi (Göynük)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.400342,30.785522" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_618102b90350eaf5d1cecd86d6f29508.setContent(html_5f7bbd0e30395ffa55fa8c90d7538694);
+            
+        
+
+        marker_01d4b79b073d916fe4eb2ef7db6ad2ee.bindPopup(popup_618102b90350eaf5d1cecd86d6f29508)
+        ;
+
+        
+    
+    
+            var marker_48931664903245a6948a781689a647f6 = L.marker(
+                [40.39935, 30.786696],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_ed5efe4af41693a1c31a3e3795fd58a1 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e30\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_48931664903245a6948a781689a647f6.setIcon(div_icon_ed5efe4af41693a1c31a3e3795fd58a1);
+        
+    
+        var popup_4764748ab0347b2f862d4597e61aa061 = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_5e4a7102785cd89e3c1d09cdeaf2e39b = $(`<div id="html_5e4a7102785cd89e3c1d09cdeaf2e39b" style="width: 100.0%; height: 100.0%;">             <b>30. Gazi Süleyman Paşa Hamamı (Göynük)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.39935,30.786696" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_4764748ab0347b2f862d4597e61aa061.setContent(html_5e4a7102785cd89e3c1d09cdeaf2e39b);
+            
+        
+
+        marker_48931664903245a6948a781689a647f6.bindPopup(popup_4764748ab0347b2f862d4597e61aa061)
+        ;
+
+        
+    
+    
+            var marker_2601c4a679947589be41fa66297831fb = L.marker(
+                [40.399312, 30.78702],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_e830d24ed8f01f40bcbe3589128a11f8 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e31\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_2601c4a679947589be41fa66297831fb.setIcon(div_icon_e830d24ed8f01f40bcbe3589128a11f8);
+        
+    
+        var popup_3cd1affc097026c1a43687d9a073ff0f = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_78cedf1d42b65cfec85076209bdce4a2 = $(`<div id="html_78cedf1d42b65cfec85076209bdce4a2" style="width: 100.0%; height: 100.0%;">             <b>31. Akşemseddin Türbesi (Göynük)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.399312,30.78702" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_3cd1affc097026c1a43687d9a073ff0f.setContent(html_78cedf1d42b65cfec85076209bdce4a2);
+            
+        
+
+        marker_2601c4a679947589be41fa66297831fb.bindPopup(popup_3cd1affc097026c1a43687d9a073ff0f)
+        ;
+
+        
+    
+    
+            var marker_1860d1aff7aee7e4b4bf166c1c0370bf = L.marker(
+                [40.399369, 30.787246],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_61bb8f04908ae966db23011ee3f16163 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e32\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_1860d1aff7aee7e4b4bf166c1c0370bf.setIcon(div_icon_61bb8f04908ae966db23011ee3f16163);
+        
+    
+        var popup_a91084193529f6a9ec8b1c95ef5737aa = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_019003eeaa6171f3576ed0fbabff725f = $(`<div id="html_019003eeaa6171f3576ed0fbabff725f" style="width: 100.0%; height: 100.0%;">             <b>32. Gazi Süleyman Paşa Camii (Göynük)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.399369,30.787246" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_a91084193529f6a9ec8b1c95ef5737aa.setContent(html_019003eeaa6171f3576ed0fbabff725f);
+            
+        
+
+        marker_1860d1aff7aee7e4b4bf166c1c0370bf.bindPopup(popup_a91084193529f6a9ec8b1c95ef5737aa)
+        ;
+
+        
+    
+    
+            var marker_eb6c3b9cb8d82234c6d62ec4c94c77e2 = L.marker(
+                [40.401634, 30.790113],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_f7b9d3a30203257713b8d10afcfce145 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e33\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_eb6c3b9cb8d82234c6d62ec4c94c77e2.setIcon(div_icon_f7b9d3a30203257713b8d10afcfce145);
+        
+    
+        var popup_ce2c873902fabb1343c87c6831424fcf = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_4c02d42a14937f7ba6f5742bb01d89d0 = $(`<div id="html_4c02d42a14937f7ba6f5742bb01d89d0" style="width: 100.0%; height: 100.0%;">             <b>33. Ömer Sekkin Hazreti Türbesi (Göynük)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.401634,30.790113" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_ce2c873902fabb1343c87c6831424fcf.setContent(html_4c02d42a14937f7ba6f5742bb01d89d0);
+            
+        
+
+        marker_eb6c3b9cb8d82234c6d62ec4c94c77e2.bindPopup(popup_ce2c873902fabb1343c87c6831424fcf)
+        ;
+
+        
+    
+    
+            var marker_66b4a3d0b3db216c3203b5b2185e786c = L.marker(
+                [40.422644, 30.956008],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_e5233542c4f5f88704583cfaaae75187 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e34\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_66b4a3d0b3db216c3203b5b2185e786c.setIcon(div_icon_e5233542c4f5f88704583cfaaae75187);
+        
+    
+        var popup_084e4da671ca29acbec3d70a90c8a2ce = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_b4724d5c9a478f6c6058db1b85cd1ede = $(`<div id="html_b4724d5c9a478f6c6058db1b85cd1ede" style="width: 100.0%; height: 100.0%;">             <b>34. Sünnet Gölü Tabiat Parkı (Göynük)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.422644,30.956008" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_084e4da671ca29acbec3d70a90c8a2ce.setContent(html_b4724d5c9a478f6c6058db1b85cd1ede);
+            
+        
+
+        marker_66b4a3d0b3db216c3203b5b2185e786c.bindPopup(popup_084e4da671ca29acbec3d70a90c8a2ce)
+        ;
+
+        
+    
+    
+            var marker_01caa7070f28e9db35a6b905de3cac52 = L.marker(
+                [40.464908, 31.21124],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_dc09d35fa6a05dd1d7379f314c7106e4 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e35\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_01caa7070f28e9db35a6b905de3cac52.setIcon(div_icon_dc09d35fa6a05dd1d7379f314c7106e4);
+        
+    
+        var popup_d394982d700e5c02691870373b16c836 = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_bc8e28be1fb391972f83ce470e2cbe56 = $(`<div id="html_bc8e28be1fb391972f83ce470e2cbe56" style="width: 100.0%; height: 100.0%;">             <b>35. Mudurnu Yıldırım Bayezid Hamamı (Mudurnu)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.464908,31.21124" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_d394982d700e5c02691870373b16c836.setContent(html_bc8e28be1fb391972f83ce470e2cbe56);
+            
+        
+
+        marker_01caa7070f28e9db35a6b905de3cac52.bindPopup(popup_d394982d700e5c02691870373b16c836)
+        ;
+
+        
+    
+    
+            var marker_a81d0faf2d4381ae534c8dccc57d141b = L.marker(
+                [40.464445, 31.211875],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_d422e12ad231ea923a2145f8f8ec957a = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e36\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_a81d0faf2d4381ae534c8dccc57d141b.setIcon(div_icon_d422e12ad231ea923a2145f8f8ec957a);
+        
+    
+        var popup_296baece299aab94235fb7371a94cbf1 = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_cd1e21eb4595cb6d0776f458beb75a7b = $(`<div id="html_cd1e21eb4595cb6d0776f458beb75a7b" style="width: 100.0%; height: 100.0%;">             <b>36. Mudurnu Yıldırım Bayezid Camii (Mudurnu)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.464445,31.211875" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_296baece299aab94235fb7371a94cbf1.setContent(html_cd1e21eb4595cb6d0776f458beb75a7b);
+            
+        
+
+        marker_a81d0faf2d4381ae534c8dccc57d141b.bindPopup(popup_296baece299aab94235fb7371a94cbf1)
+        ;
+
+        
+    
+    
+            var marker_9da0cb7b8a2690fc1ac8aa48a5d08d70 = L.marker(
+                [40.431531, 31.601378],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_15521277e42a08363b7c49a9547d3e48 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e37\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_9da0cb7b8a2690fc1ac8aa48a5d08d70.setIcon(div_icon_15521277e42a08363b7c49a9547d3e48);
+        
+    
+        var popup_3c78b58f7a3a54e5aa82ffb877416d83 = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_451379e67e4b4a7026fd5c00c252d94d = $(`<div id="html_451379e67e4b4a7026fd5c00c252d94d" style="width: 100.0%; height: 100.0%;">             <b>37. Seben Kaya Evleri (Seben)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.431531,31.601378" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_3c78b58f7a3a54e5aa82ffb877416d83.setContent(html_451379e67e4b4a7026fd5c00c252d94d);
+            
+        
+
+        marker_9da0cb7b8a2690fc1ac8aa48a5d08d70.bindPopup(popup_3c78b58f7a3a54e5aa82ffb877416d83)
+        ;
+
+        
+    
+    
+            var marker_f38daffb071be42a869c5b0e8f1a3e83 = L.marker(
+                [40.354203, 31.928239],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_ee691ce7f5184582bf1ade8cf8478390 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e38\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_f38daffb071be42a869c5b0e8f1a3e83.setIcon(div_icon_ee691ce7f5184582bf1ade8cf8478390);
+        
+    
+        var popup_90b38e535ce650a77c53c6a0a4eacfef = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_bdddb84abd4f26c8c1e044df33749977 = $(`<div id="html_bdddb84abd4f26c8c1e044df33749977" style="width: 100.0%; height: 100.0%;">             <b>38. Kıbrıscık Karagöl Tabiat Parkı (Kıbrıscık)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.354203,31.928239" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_90b38e535ce650a77c53c6a0a4eacfef.setContent(html_bdddb84abd4f26c8c1e044df33749977);
+            
+        
+
+        marker_f38daffb071be42a869c5b0e8f1a3e83.bindPopup(popup_90b38e535ce650a77c53c6a0a4eacfef)
+        ;
+
+        
+    
+    
+            var marker_5bf326483c55070858a2c5ade7ef19fa = L.marker(
+                [40.597514, 31.808795],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_28904108eab0da00321f6bd936c67c75 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e39\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_5bf326483c55070858a2c5ade7ef19fa.setIcon(div_icon_28904108eab0da00321f6bd936c67c75);
+        
+    
+        var popup_1f22ecab8f1f566c02c15d287169ab0b = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_56ab7fb444109765c2f37d296163746b = $(`<div id="html_56ab7fb444109765c2f37d296163746b" style="width: 100.0%; height: 100.0%;">             <b>39. Kartalkaya Kayak Merkezi (Merkez)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.597514,31.808795" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_1f22ecab8f1f566c02c15d287169ab0b.setContent(html_56ab7fb444109765c2f37d296163746b);
+            
+        
+
+        marker_5bf326483c55070858a2c5ade7ef19fa.bindPopup(popup_1f22ecab8f1f566c02c15d287169ab0b)
+        ;
+
+        
+    
+    
+            var marker_b232f3d73f9b81ebd62d0a804f387a6b = L.marker(
+                [40.941268, 31.744918],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_802f01977d58929215db0a0b9b42e387 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e40\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_b232f3d73f9b81ebd62d0a804f387a6b.setIcon(div_icon_802f01977d58929215db0a0b9b42e387);
+        
+    
+        var popup_b3765b76e1137b170372db6847d765ea = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_f1fa76f564cd0dada29def21289aa51c = $(`<div id="html_f1fa76f564cd0dada29def21289aa51c" style="width: 100.0%; height: 100.0%;">             <b>40. Yedigöller Milli Parkı (Merkez, Bolu)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.941268,31.744918" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_b3765b76e1137b170372db6847d765ea.setContent(html_f1fa76f564cd0dada29def21289aa51c);
+            
+        
+
+        marker_b232f3d73f9b81ebd62d0a804f387a6b.bindPopup(popup_b3765b76e1137b170372db6847d765ea)
+        ;
+
+        
+    
+    
+            var marker_d5e96290bcdf3e7fd61914ae2ba0c6e3 = L.marker(
+                [40.806144, 32.191529],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_9db93dd707bb0d66460d342fa6fe14d6 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: blue; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e41\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_d5e96290bcdf3e7fd61914ae2ba0c6e3.setIcon(div_icon_9db93dd707bb0d66460d342fa6fe14d6);
+        
+    
+        var popup_5b8637e51b9b3bf461e92c02ba530ba1 = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_14bf78f3300ff8bc877add52e5a8f99c = $(`<div id="html_14bf78f3300ff8bc877add52e5a8f99c" style="width: 100.0%; height: 100.0%;">             <b>41. Gerede Esentepe Mesire Alanı (Gerede)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.806144,32.191529" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_5b8637e51b9b3bf461e92c02ba530ba1.setContent(html_14bf78f3300ff8bc877add52e5a8f99c);
+            
+        
+
+        marker_d5e96290bcdf3e7fd61914ae2ba0c6e3.bindPopup(popup_5b8637e51b9b3bf461e92c02ba530ba1)
+        ;
+
+        
+    
+    
+            var marker_ac021f68d81a4ee3d136c8dd74e80769 = L.marker(
+                [40.798842, 32.197104],
+                {}
+            ).addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+    
+            var div_icon_f7b5f0271febe8f78dc809d7d843b27d = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 11pt; color: white; font-weight: bold; background: red; border-radius: 50%; width: 25px; height: 25px; text-align: center; line-height:25px;\"\u003e42\u003c/div\u003e", "iconAnchor": [10, 10], "iconSize": [20, 20]});
+            marker_ac021f68d81a4ee3d136c8dd74e80769.setIcon(div_icon_f7b5f0271febe8f78dc809d7d843b27d);
+        
+    
+        var popup_46e715da02e90da1dae6304667448172 = L.popup({"maxWidth": 250});
+
+        
+            
+                var html_740c0f5bfda5eccf28df0cc6f31a2310 = $(`<div id="html_740c0f5bfda5eccf28df0cc6f31a2310" style="width: 100.0%; height: 100.0%;">             <b>42. Gerede Aşağı Tekke Camii ve Türbesi (Gerede)</b><br>             <a href="https://www.google.com/maps/dir/?api=1&destination=40.798842,32.197104" target="_blank">Yol Tarifi</a>             </div>`)[0];
+                popup_46e715da02e90da1dae6304667448172.setContent(html_740c0f5bfda5eccf28df0cc6f31a2310);
+            
+        
+
+        marker_ac021f68d81a4ee3d136c8dd74e80769.bindPopup(popup_46e715da02e90da1dae6304667448172)
+        ;
+
+        
+    
+    
+            tile_layer_b939cd33cdc0ff02e65870666b095449.addTo(map_48362c84420aff7149ac51f743c403b2);
+        
+</script>
+</html>
