@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Ali AKSAÇ - Sınav Görevleri (20-24 Ocak 2025)</title>
+  <style>
+    /* Sayfa Tasarımı */
+    body {
+      margin: 0; 
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      text-align: center;
+      background: #2c3e50;
+      color: #ecf0f1;
+      margin: 0;
+      padding: 20px 0;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      text-align: center;
+      padding: 8px;
+    }
+
+    th {
+      background: #3498db;
+      color: #fff;
+    }
+
+    /* Satırların dönüşümü */
+    tr.completed {
+      background-color: #c7f7c7 !important; /* Tamamlanınca satır rengi yeşile döner */
+    }
+
+    /* Satırları hafif renklendirmek için */
+    tbody tr:nth-child(even) {
+      background: #f9f9f9;
+    }
+
+    /* Buton Tasarımı */
+    button {
+      background: #2ecc71;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #27ae60;
+    }
+
+    /* Başlık satırları için küçük soluk gri */
+    .section-header {
+      text-align: left;
+      background: #e2e2e2 !important;
+      font-weight: bold;
+      color: #000;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Ali AKSAÇ - Sınav Görevleri (20-24 Ocak 2025)</h1>
+  <div class="container">
+    
+    <table>
+      <thead>
+        <tr>
+          <th>Tarih</th>
+          <th>Saat</th>
+          <th>Ders Adı</th>
+          <th>Dersin Sorumlusu</th>
+          <th>Derslik (Görev Yerim)</th>
+          <th>Görevi Tamamla</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <!-- 20 Ocak 2025 Pazartesi -->
+        <tr class="section-header"><td colspan="6">20 Ocak 2025 - Pazartesi</td></tr>
+        <tr id="row1">
+          <td>20.01.2025</td>
+          <td>09:00 - 10:00</td>
+          <td>İLH 117 Osmanlı Türkçesi (I. Öğr.)</td>
+          <td>Prof. Dr. Nuran ÖZTÜRK</td>
+          <td>D-114</td>
+          <td><button onclick="toggleCompleted('row1')">Tamamlandı</button></td>
+        </tr>
+        <tr id="row2">
+          <td>20.01.2025</td>
+          <td>10:30 - 11:30</td>
+          <td>İLH 303 Sistematik Kelam (I. &amp; II. Öğr.)</td>
+          <td>Prof. Dr. İsmail ŞIK</td>
+          <td>D-114</td>
+          <td><button onclick="toggleCompleted('row2')">Tamamlandı</button></td>
+        </tr>
+        <tr id="row3">
+          <td>20.01.2025</td>
+          <td>13:30 - 14:30</td>
+          <td>İLH 229 Kelam Tarihi (I. Öğr.)</td>
+          <td>Dr. Öğr. Üyesi Hamdi AKBAŞ</td>
+          <td>D-111</td>
+          <td><button onclick="toggleCompleted('row3')">Tamamlandı</button></td>
+        </tr>
+        <tr id="row4">
+          <td>20.01.2025</td>
+          <td>15:00 - 16:00</td>
+          <td>İLH 431-419 Tasavvuf (I. &amp; II. Öğr.)</td>
+          <td>Dr. Öğr. Üyesi Derviş DOKGÖZ</td>
+          <td>D-112</td>
+          <td><button onclick="toggleCompleted('row4')">Tamamlandı</button></td>
+        </tr>
+
+        <!-- 21 Ocak 2025 Salı -->
+        <tr class="section-header"><td colspan="6">21 Ocak 2025 - Salı</td></tr>
+        <tr id="row5">
+          <td>21.01.2025</td>
+          <td>09:00 - 10:00</td>
+          <td>İHS 121 Eğitim Bilimlerine Giriş (I. &amp; II. Öğr.)</td>
+          <td>Dr. Öğr. Üyesi Ahmet BEKEN</td>
+          <td>D-114</td>
+          <td><button onclick="toggleCompleted('row5')">Tamamlandı</button></td>
+        </tr>
+        <tr id="row6">
+          <td>21.01.2025</td>
+          <td>10:30 - 11:30</td>
+          <td>İLH 305 İslam Hukuku I (I. &amp; II. Öğr.)</td>
+          <td>Prof. Dr. Nasi ASLAN</td>
+          <td>D-110</td>
+          <td><button onclick="toggleCompleted('row6')">Tamamlandı</button></td>
+        </tr>
+        <tr id="row7">
+          <td>21.01.2025</td>
+          <td>13:30 - 14:30</td>
+          <td>İHS 235 Öğretim İlke ve Yöntemleri (I. &amp; II. Öğr.)</td>
+          <td>Dr. Öğr. Üyesi Ahmet BEKEN</td>
+          <td>D-112</td>
+          <td><button onclick="toggleCompleted('row7')">Tamamlandı</button></td>
+        </tr>
+
+        <!-- 22 Ocak 2025 Çarşamba -->
+        <tr class="section-header"><td colspan="6">22 Ocak 2025 - Çarşamba</td></tr>
+        <tr id="row8">
+          <td>22.01.2025</td>
+          <td>10:30 - 11:30</td>
+          <td>İLH 311 Dinler Tarihi II (I. &amp; II. Öğr., A Grubu)</td>
+          <td>Prof. Dr. Kadir ALBAYRAK</td>
+          <td>D-110</td>
+          <td><button onclick="toggleCompleted('row8')">Tamamlandı</button></td>
+        </tr>
+        <tr id="row9">
+          <td>22.01.2025</td>
+          <td>13:30 - 14:30</td>
+          <td>İLH 219 Tefsir I (I. Öğr.)</td>
+          <td>Dr. Öğr. Üyesi Ertuğrul DÖNER</td>
+          <td>D-112</td>
+          <td><button onclick="toggleCompleted('row9')">Tamamlandı</button></td>
+        </tr>
+        <tr id="row10">
+          <td>22.01.2025</td>
+          <td>15:00 - 16:00</td>
+          <td>İLH 429-401 Din Eğitimi (I. &amp; II. Öğr.)</td>
+          <td>Prof. Dr. Tuğrul YÜRÜK</td>
+          <td>D-110</td>
+          <td><button onclick="toggleCompleted('row10')">Tamamlandı</button></td>
+        </tr>
+
+        <!-- 23 Ocak 2025 Perşembe -->
+        <tr class="section-header"><td colspan="6">23 Ocak 2025 - Perşembe</td></tr>
+        <tr id="row11">
+          <td>23.01.2025</td>
+          <td>10:30 - 11:30</td>
+          <td>İLH 307 İslam Mezhepleri Tarihi I (B-A Grubu)</td>
+          <td>Prof. Dr. Yusuf GÖKALP</td>
+          <td>D-114</td>
+          <td><button onclick="toggleCompleted('row11')">Tamamlandı</button></td>
+        </tr>
+        <tr id="row12">
+          <td>23.01.2025</td>
+          <td>13:30 - 14:30</td>
+          <td>İLH 223 İslam Tarihi II (I. &amp; II. Öğr.)</td>
+          <td>Doç. Dr. Aygül DÜZENLİ</td>
+          <td>D-114</td>
+          <td><button onclick="toggleCompleted('row12')">Tamamlandı</button></td>
+        </tr>
+        <tr id="row13">
+          <td>23.01.2025</td>
+          <td>15:00 - 16:00</td>
+          <td>İHS 407 İslam Ülkeleri Tarih ve Coğrafyası (I. &amp; II. Öğr.)</td>
+          <td>Doç. Dr. Ali HATALMIŞ</td>
+          <td>D-105</td>
+          <td><button onclick="toggleCompleted('row13')">Tamamlandı</button></td>
+        </tr>
+
+        <!-- 24 Ocak 2025 Cuma -->
+        <tr class="section-header"><td colspan="6">24 Ocak 2025 - Cuma</td></tr>
+        <tr id="row14">
+          <td>24.01.2025</td>
+          <td>09:00 - 10:00</td>
+          <td>UTD 101 Türk Dili I (I. Öğr.)</td>
+          <td>Öğr. Gör. Dr. Emine KURT</td>
+          <td>D-114</td>
+          <td><button onclick="toggleCompleted('row14')">Tamamlandı</button></td>
+        </tr>
+        <tr id="row15">
+          <td>24.01.2025</td>
+          <td>10:30 - 11:30</td>
+          <td>İLH 315 Tefsir III (I. &amp; II. Öğr.)</td>
+          <td>Prof. Dr. Sami KILINÇLI</td>
+          <td>D-110</td>
+          <td><button onclick="toggleCompleted('row15')">Tamamlandı</button></td>
+        </tr>
+        <tr id="row16">
+          <td>24.01.2025</td>
+          <td>15:00 - 16:00</td>
+          <td>İLH 435-427 Din Felsefesi (I. &amp; II. Öğr.)</td>
+          <td>Arş. Gör. Dr. Emine GÖÇER</td>
+          <td>D-110</td>
+          <td><button onclick="toggleCompleted('row16')">Tamamlandı</button></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    // Butona tıklandığında ilgili satır "completed" sınıfını alarak yeşile döner.
+    function toggleCompleted(rowId) {
+      var row = document.getElementById(rowId);
+      row.classList.toggle("completed");
+    }
+  </script>
+</body>
+</html>
